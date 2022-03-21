@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "directly_attached=false": {
+      "model": "subterranea:block/hanging_vines_grown"
+	},
+	"directly_attached=true": {
+	  "model": "subterranea:block/hanging_vines_grown_directly_attached"
+	}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "forge:multi-layer",
+  "textures": {
+    "particle": "subterranea:block/phosphorus_lantern_base"
+  },
+  "layers": {
+    "solid": {
+      "parent": "subterranea:block/hanging_subterranea_lantern_enclosure",
+      "textures": {
+        "base": "subterranea:block/phosphorus_lantern_base",
+        "phosphorus_base": "subterranea:block/unlit_red_phosphorus_lantern_fuel_base",
+        "enclosure": "subterranea:block/phosphorus_lantern_enclosure",
+        "top": "subterranea:block/phosphorus_lantern_top",
+        "chain": "subterranea:block/phosphorus_lantern_top"
+      }
+    },
+    "translucent": {
+      "parent": "subterranea:block/subterranea_lantern_glass",
+      "textures": {
+        "glass": "subterranea:block/phosphorus_lantern_glass"
+      }
+    }
+  }
+  
+}

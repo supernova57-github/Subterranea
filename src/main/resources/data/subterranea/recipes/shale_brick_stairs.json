@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "subterranea:shale_bricks"
+    }
+  },
+  "result": {
+    "item": "subterranea:shale_brick_stairs",
+    "count": 4
+  }
+}

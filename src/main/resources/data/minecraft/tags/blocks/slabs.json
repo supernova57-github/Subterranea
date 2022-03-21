@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "subterranea:shale_slab",
+    "subterranea:shale_tile_slab",
+    "subterranea:slightly_mossy_shale_tile_slab",
+    "subterranea:mossy_shale_tile_slab",
+    "subterranea:cracked_shale_tile_slab",
+    "subterranea:shale_brick_slab",
+    "subterranea:mossy_shale_brick_slab",
+    "subterranea:cracked_shale_brick_slab"
+  ]
+}

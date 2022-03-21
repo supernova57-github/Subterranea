@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "subterranea:shale_brick_wall",
+    "subterranea:mossy_shale_brick_wall",
+    "subterranea:cracked_shale_brick_wall"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "subterranea:mossy_shale_bricks"
+    },
+    "title": {
+      "translate": "advancements.subterranea.root.title"
+    },
+    "description": {
+      "translate": "advancements.subterranea.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "subterranea:textures/block/shale_side.png"
+  },
+  "criteria": {
+    "found_mountain_fortress": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "subterranea:mountain_fortress"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "found_mountain_fortress"
+    ]
+  ]
+
+}

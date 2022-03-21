@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "subterranea:block/shale_slab"
+    },
+    "type=double": {
+      "model": "subterranea:block/shale"
+    },
+    "type=top": {
+      "model": "subterranea:block/shale_slab_top"
+    }
+  }
+}

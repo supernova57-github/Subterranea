@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "subterranea:block/unlit_red_phosphorus_lantern"
+    },
+    "hanging=true": {
+      "model": "subterranea:block/hanging_unlit_red_phosphorus_lantern"
+    }
+  }
+}

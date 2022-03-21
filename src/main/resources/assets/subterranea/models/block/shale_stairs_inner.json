@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "subterranea:block/shale_top",
+    "top": "subterranea:block/shale_top",
+    "side": "subterranea:block/shale_side"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "subterranea:cracked_shale_tiles"
+  },
+  "result": "subterranea:cracked_shale_tile_stairs",
+  "count": 1
+}

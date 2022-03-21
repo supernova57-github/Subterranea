@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "subterranea:block/slightly_mossy_shale_tile_slab_top"
+    },
+    "type=bottom": {
+      "model": "subterranea:block/slightly_mossy_shale_tile_slab"
+    },
+    "type=double": {
+      "model": "subterranea:block/slightly_mossy_shale_tiles"
+    }
+  }
+}

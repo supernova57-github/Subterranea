@@ -1,0 +1,90 @@
+{
+
+  "advancements.subterranea.root.title": "Subterranea",
+  "advancements.subterranea.root.description": "Hidden away from Summer's scorch and Winter's bite, a thriving world awaits...",
+  
+  "advancements.subterranea.as_above.title": "As Above...",
+  "advancements.subterranea.as_above.description": "Enter a Mountain Fortress.",
+
+
+  "block.subterranea.essence_flower": "Essence Flower Vines",
+  "block.subterranea.essence_flower_grown": "Essence Flower Vines (Grown)",
+
+  "block.subterranea.hanging_vines": "Hanging Vines",
+  "block.subterranea.hanging_vines_grown": "Hanging Vines (Grown)",
+  
+  "block.subterranea.limestone": "Limestone",
+  
+  "block.subterranea.sandstone": "Sandstone",
+  
+  "block.subterranea.shale": "Shale",
+  "block.subterranea.shale_slab": "Shale Slab",
+  "block.subterranea.shale_stairs": "Shale Stairs",
+  
+  "block.subterranea.shale_tiles": "Shale Tiles",
+  "block.subterranea.shale_tile_slab": "Shale Tile Slab",
+  "block.subterranea.shale_tile_stairs": "Shale Tile Stairs",
+  
+  "block.subterranea.chiseled_shale_tiles_body": "Chiseled Shale Tiles (Body)",
+  "block.subterranea.chiseled_shale_tiles_spirit": "Chiseled Shale Tiles (Spirit)",
+  "block.subterranea.chiseled_shale_tiles_soul": "Chiseled Shale Tiles (Soul)",
+  
+  "block.subterranea.enchanted_chiseled_shale_tiles": "Enchanted Chiseled Shale Tiles",
+  
+  "block.subterranea.slightly_mossy_shale_tiles": "Slightly Mossy Shale Tiles",
+  "block.subterranea.slightly_mossy_shale_tile_slab": "Slightly Mossy Shale Tile Slab",
+  "block.subterranea.slightly_mossy_shale_tile_stairs": "Slightly Mossy Shale Tile Stairs",
+  
+  "block.subterranea.mossy_shale_tiles": "Mossy Shale Tiles",
+  "block.subterranea.mossy_shale_tile_slab": "Mossy Shale Tile Slab",
+  "block.subterranea.mossy_shale_tile_stairs": "Mossy Shale Tile Stairs",
+  
+  "block.subterranea.cracked_shale_tiles": "Cracked Shale Tiles",
+  "block.subterranea.cracked_shale_tile_slab": "Cracked Shale Tile Slab",
+  "block.subterranea.cracked_shale_tile_stairs": "Cracked Shale Tile Stairs",
+  
+  "block.subterranea.shale_bricks": "Shale Bricks",
+  "block.subterranea.shale_brick_slab": "Shale Brick Slab",
+  "block.subterranea.shale_brick_stairs": "Shale Brick Stairs",
+  "block.subterranea.shale_brick_wall": "Shale Brick Wall",
+  
+  "block.subterranea.mossy_shale_bricks": "Mossy Shale Bricks",
+  "block.subterranea.mossy_shale_brick_slab": "Mossy Shale Brick Slab",
+  "block.subterranea.mossy_shale_brick_stairs": "Mossy Shale Brick Stairs",
+  "block.subterranea.mossy_shale_brick_wall": "Mossy Shale Brick Wall",
+  
+  "block.subterranea.cracked_shale_bricks": "Cracked Shale Bricks",
+  "block.subterranea.cracked_shale_brick_slab": "Cracked Shale Brick Slab",
+  "block.subterranea.cracked_shale_brick_stairs": "Cracked Shale Brick Stairs",
+  "block.subterranea.cracked_shale_brick_wall": "Cracked Shale Brick Wall",
+  
+  
+  "block.subterranea.unlit_red_phosphorus_torch": "Unlit Red Phosphorus Torch",
+  "block.subterranea.unlit_red_phosphorus_wall_torch": "Unlit Red Phosphorus Wall Torch",
+  "block.subterranea.red_phosphorus_torch": "Red Phosphorus Torch",
+  "block.subterranea.red_phosphorus_wall_torch": "Red Phosphorus Wall Torch",
+  
+  "block.subterranea.unlit_red_phosphorus_lantern": "Unlit Red Phosphorus Lantern",
+  "block.subterranea.red_phosphorus_lantern": "Red Phosphorus Lantern",
+  
+  
+  "death.attack.frostbite": "%1$s froze to death",
+  "death.attack.frostbite.player": "%1$s froze to death whilst trying to escape %2$s",
+  
+  "death.attack.snowflake": "%1$s became an icicle",
+  
+  
+  "effect.subterranea.frostbite": "Frostbite",
+  
+  
+  "entity.subterranea.snowflake": "Snowflake",
+
+	
+  "item.subterranea.essence_flower": "Essence Flower",
+  "item.subterranea.scepter_of_frost": "Scepter of Frost",
+  
+  
+  "itemGroup.subterranea_blocks": "Subterranea Blocks",
+  "itemGroup.subterranea_items": "Subterranea Items"
+  
+}

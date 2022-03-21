@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "subterranea:block/shale_side",
+    "end": "subterranea:block/shale_top"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "subterranea:mountain_fortress/castle_wall_dining_hall",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "subterranea:mountain_fortress/castle_wall_dining_hall",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

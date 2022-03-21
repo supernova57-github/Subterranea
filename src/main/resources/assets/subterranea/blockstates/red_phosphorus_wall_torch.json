@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "subterranea:block/red_phosphorus_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "subterranea:block/red_phosphorus_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "subterranea:block/red_phosphorus_wall_torch",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "subterranea:block/red_phosphorus_wall_torch",
+      "y": 360
+    }
+  }
+}

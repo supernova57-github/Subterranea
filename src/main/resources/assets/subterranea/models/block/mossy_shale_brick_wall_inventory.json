@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "subterranea:block/mossy_shale_bricks"
+  }
+}

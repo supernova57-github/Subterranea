@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "subterranea:shale_brick_wall"
+    ]
+  },
+  "criteria": {
+    "has_shale_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "subterranea:shale_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "subterranea:shale_brick_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_shale_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

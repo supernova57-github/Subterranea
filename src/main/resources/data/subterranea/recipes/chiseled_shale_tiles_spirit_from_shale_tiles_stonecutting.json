@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "subterranea:shale_tiles"
+  },
+  "result": "subterranea:chiseled_shale_tiles_spirit",
+  "count": 1
+}

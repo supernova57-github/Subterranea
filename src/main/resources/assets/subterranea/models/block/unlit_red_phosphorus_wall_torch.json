@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch_wall",
+  "textures": {
+    "torch": "subterranea:block/unlit_red_phosphorus_torch"
+  }
+}

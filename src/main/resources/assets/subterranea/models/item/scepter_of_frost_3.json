@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "subterranea:item/scepter_of_frost_3"
+  }
+}

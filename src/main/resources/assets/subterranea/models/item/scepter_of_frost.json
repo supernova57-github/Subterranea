@@ -1,0 +1,44 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "subterranea:item/scepter_of_frost_full"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.1
+      },
+      "model": "subterranea:item/scepter_of_frost_5"
+    },
+    {
+      "predicate": {
+        "damage": 0.3
+      },
+      "model": "subterranea:item/scepter_of_frost_4"
+    },
+    {
+      "predicate": {
+        "damage": 0.5
+      },
+      "model": "subterranea:item/scepter_of_frost_3"
+    },
+    {
+      "predicate": {
+        "damage": 0.7
+      },
+      "model": "subterranea:item/scepter_of_frost_2"
+    },
+    {
+      "predicate": {
+        "damage": 0.85
+      },
+      "model": "subterranea:item/scepter_of_frost_1"
+    },
+    {
+      "predicate": {
+        "damage": 0.99
+      },
+      "model": "subterranea:item/scepter_of_frost_empty"
+    }
+  ]
+}

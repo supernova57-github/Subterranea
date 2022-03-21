@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "mossy_shale_tile_stairs",
+  "ingredients": [
+    {
+      "item": "subterranea:shale_tile_stairs"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    }
+  ],
+  "result": {
+    "item": "subterranea:mossy_shale_tile_stairs"
+  }
+}

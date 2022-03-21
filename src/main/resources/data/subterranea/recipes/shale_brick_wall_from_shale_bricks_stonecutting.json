@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "subterranea:shale_bricks"
+  },
+  "result": "subterranea:shale_brick_wall",
+  "count": 1
+}

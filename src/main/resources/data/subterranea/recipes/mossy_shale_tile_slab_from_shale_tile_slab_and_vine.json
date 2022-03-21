@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "mossy_shale_tile_slab",
+  "ingredients": [
+    {
+      "item": "subterranea:shale_tile_slab"
+    },
+    {
+      "item": "minecraft:vine"
+    },
+    {
+      "item": "minecraft:vine"
+    }
+  ],
+  "result": {
+    "item": "subterranea:mossy_shale_tile_slab"
+  }
+}

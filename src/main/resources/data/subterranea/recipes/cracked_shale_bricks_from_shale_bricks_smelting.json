@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "subterranea:shale_bricks"
+  },
+  "result": "subterranea:cracked_shale_bricks",
+  "experience": 0.1,
+  "cookingtime": 200
+}

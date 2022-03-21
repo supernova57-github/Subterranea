@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "subterranea:mossy_shale_tiles_from_slightly_mossy_shale_tiles_and_moss_block"
+    ]
+  },
+  "criteria": {
+    "has_slightly_mossy_shale_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "subterranea:slightly_mossy_shale_tiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "subterranea:mossy_shale_tiles_from_slightly_mossy_shale_tiles_and_moss_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_slightly_mossy_shale_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

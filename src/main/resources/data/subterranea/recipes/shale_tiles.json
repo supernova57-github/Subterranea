@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "subterranea:shale"
+    }
+  },
+  "result": {
+    "item": "subterranea:shale_tiles",
+    "count": 4
+  }
+}

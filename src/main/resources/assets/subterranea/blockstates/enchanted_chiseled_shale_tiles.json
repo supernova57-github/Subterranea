@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "active=false,symbol=body": {
+      "model": "subterranea:block/enchanted_chiseled_shale_tiles_body_inactive"
+    },
+    "active=true,symbol=body": {
+      "model": "subterranea:block/enchanted_chiseled_shale_tiles_body_active"
+    },
+    "active=false,symbol=spirit": {
+      "model": "subterranea:block/enchanted_chiseled_shale_tiles_spirit_inactive"
+    },
+    "active=true,symbol=spirit": {
+      "model": "subterranea:block/enchanted_chiseled_shale_tiles_spirit_active"
+    },
+    "active=false,symbol=soul": {
+      "model": "subterranea:block/enchanted_chiseled_shale_tiles_soul_inactive"
+    },
+    "active=true,symbol=soul": {
+      "model": "subterranea:block/enchanted_chiseled_shale_tiles_soul_active"
+    }
+  }
+}

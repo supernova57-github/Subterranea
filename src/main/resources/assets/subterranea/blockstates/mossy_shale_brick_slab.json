@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "subterranea:block/mossy_shale_brick_slab"
+    },
+    "type=double": {
+      "model": "subterranea:block/mossy_shale_bricks"
+    },
+    "type=top": {
+      "model": "subterranea:block/mossy_shale_brick_slab_top"
+    }
+  }
+}

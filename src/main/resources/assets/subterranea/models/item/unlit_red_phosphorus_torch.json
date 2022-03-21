@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "subterranea:item/unlit_red_phosphorus_torch"
+  }
+}
