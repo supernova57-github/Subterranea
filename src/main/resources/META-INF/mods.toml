@@ -29,7 +29,7 @@ displayURL="http://example.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="A huge thank-you to TelepathicGrunt - his structure tutorials really helped me out in learning to create structures!" #optional
+credits="A huge thank you to TelepathicGrunt - his structure tutorials really helped me out in learning to create structures!" #optional
 # A text field displayed in the mod UI
 authors="supernova57" #optional
 # The description text for the mod (multi line!) (#mandatory)

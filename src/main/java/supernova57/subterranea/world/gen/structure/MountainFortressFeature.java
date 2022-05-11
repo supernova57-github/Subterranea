@@ -6,22 +6,15 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 import java.util.Set;
-import java.util.function.Predicate;
 
 import com.mojang.serialization.Codec;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.ChunkPos;
-import net.minecraft.world.level.LevelHeightAccessor;
 import net.minecraft.world.level.StructureFeatureManager;
 import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.BiomeSource;
 import net.minecraft.world.level.block.AirBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -32,23 +25,19 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SnowyDirtBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TallGrassBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.JigsawConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.StructureFeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.structures.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.PoolElementStructurePiece;
 import net.minecraft.world.level.levelgen.structure.StructurePiece;
-import net.minecraft.world.level.levelgen.structure.StructureStart;
-import net.minecraft.world.level.levelgen.structure.pieces.PieceGenerator;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGeneratorSupplier;
 import net.minecraft.world.level.levelgen.structure.pieces.PiecesContainer;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureManager;
-import supernova57.subterranea.main.Reference;
+import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import supernova57.subterranea.main.Subterranea;
 
 public class MountainFortressFeature extends StructureFeature<JigsawConfiguration> {
@@ -62,75 +51,30 @@ public class MountainFortressFeature extends StructureFeature<JigsawConfiguratio
 
 	public MountainFortressFeature(Codec<JigsawConfiguration> configCodec) {
 		
-		super(configCodec, (context) -> {
-			// Credit to TelepathicGrunt's StructureTutorialMod (modified to fit ternary operator).
-			return MountainFortressFeature.isFeatureChunk(context) ? MountainFortressFeature.createPiecesGenerator(context) : Optional.empty();	
-		}, MountainFortressFeature::generateAdditionalComponents);
+		super(configCodec, 
+			 (context) -> MountainFortressFeature.canGenerate(context) ? 
+					 JigsawPlacement.addPieces(
+								context,
+								PoolElementStructurePiece::new,
+								new BlockPos(context.chunkPos().getMinBlockX(), 0, context.chunkPos().getMinBlockZ()), 
+								false, 
+								true) 
+					 : Optional.empty(),
+			 MountainFortressFeature::generateAdditionalComponents
+		);
 		
 	}
 
-	@Override
-	public String getFeatureName() {
-		return "subterranea:mountain_fortress";
-	}
-	
 	@Override
 	public Decoration step() {
 		return Decoration.SURFACE_STRUCTURES;
 	}
 
 	
-	protected static boolean isFeatureChunk(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
+	protected static boolean canGenerate(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
 		BlockPos testPos = context.chunkPos().getWorldPosition();
 		return context.chunkGenerator().getFirstOccupiedHeight(testPos.getX(), testPos.getZ(), Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor()) > 90;
 	}
-	
-	// Credit to TelepathicGrunt's StructureTutorialMod for setting this up!
-	public static Optional<PieceGenerator<JigsawConfiguration>> createPiecesGenerator(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
-			
-		BlockPos structurePos = new BlockPos(context.chunkPos().getMinBlockX(), 0, context.chunkPos().getMinBlockZ());
-		
-		JigsawConfiguration newConfig = new JigsawConfiguration(
-				() -> context.registryAccess().registryOrThrow(Registry.TEMPLATE_POOL_REGISTRY) 
-					.get(new ResourceLocation(Reference.MODID, "mountain_fortress/start")), 
-				15);
-		
-		PieceGeneratorSupplier.Context<JigsawConfiguration> newContext = new PieceGeneratorSupplier.Context<> (
-				context.chunkGenerator(), 
-				context.biomeSource(), 
-				context.seed(), 
-				context.chunkPos(), 
-				newConfig, 
-				context.heightAccessor(), 
-				context.validBiome(), 
-				context.structureManager(), 
-				context.registryAccess());
-		
-		Optional<PieceGenerator<JigsawConfiguration>> structurePiecesGenerator = JigsawPlacement.addPieces(
-				newContext,
-				PoolElementStructurePiece::new,
-				structurePos, 
-				false, 
-				true		
-		);
-		
-		return structurePiecesGenerator; 
-		
-	}
-	
-	
-	@Override
-	public StructureStart<?> generate(RegistryAccess registryAccess, ChunkGenerator generator, BiomeSource biomeSource,
-			StructureManager structureManager, long p_191137_, ChunkPos chunkPos, int p_191139_,
-			StructureFeatureConfiguration structureConfig, JigsawConfiguration jigsawConfig, LevelHeightAccessor levelHeight,
-			Predicate<Biome> biomeCheck) {		
-
-	
-		return super.generate(registryAccess, generator, biomeSource, structureManager, p_191137_, chunkPos, p_191139_, structureConfig, jigsawConfig,
-				levelHeight, biomeCheck);
-	}
-	
-	
 	
 	public static void generateAdditionalComponents(WorldGenLevel world, StructureFeatureManager manager, ChunkGenerator generator, Random random, BoundingBox boundary, ChunkPos chunkPos, PiecesContainer container) {
 		generateFoundation(world, manager, generator, random, boundary, chunkPos, container);
@@ -395,6 +339,7 @@ public class MountainFortressFeature extends StructureFeature<JigsawConfiguratio
 		
 		boolean hasHitGround = false;
 		
+		BlockState currentBlockState;
 		Block currentBlock;
 		
 		boolean isInProperChunk;
@@ -427,7 +372,8 @@ public class MountainFortressFeature extends StructureFeature<JigsawConfiguratio
 				}
 			}
 			
-			currentBlock = isInProperChunk ? world.getBlockState(pos).getBlock() : null;
+			currentBlockState = isInProperChunk ? world.getBlockState(pos) : null;
+			currentBlock = currentBlockState != null ? currentBlockState.getBlock() : null;
 			
 			if (isInProperChunk && (currentBlock instanceof AirBlock || currentBlock instanceof SnowyDirtBlock || currentBlock instanceof BushBlock)
 					&& world.getBlockState(pos.above(50)).getBlock() instanceof AirBlock) {	
@@ -440,11 +386,11 @@ public class MountainFortressFeature extends StructureFeature<JigsawConfiguratio
 						}
 					//}
 					if (i == (layer * 2) - 1) {
-						Subterranea.LOGGER.info(BlockTags.BASE_STONE_OVERWORLD.contains(currentBlock));
+						Subterranea.LOGGER.info(currentBlockState.is(BlockTags.BASE_STONE_OVERWORLD));
 						if (currentBlock instanceof LiquidBlock 
 								|| currentBlock.equals(Blocks.DIRT) 
 								|| currentBlock.equals(Blocks.GRASS_BLOCK)
-								|| BlockTags.BASE_STONE_OVERWORLD.contains(currentBlock)) {
+								|| currentBlockState.is(BlockTags.BASE_STONE_OVERWORLD)) {
 							hasHitGround = true;
 							break;
 						}
@@ -583,7 +529,7 @@ public class MountainFortressFeature extends StructureFeature<JigsawConfiguratio
 					&& (REPLACEABLE_BLOCK_TYPES.contains(world.getBlockState(pos).getBlock().getClass())
 							|| world.getBlockState(pos).getBlock().equals(Blocks.DIRT))
 					&& !(world.getBlockState(pos.above()).getBlock() instanceof AirBlock)
-					&& (BlockTags.STONE_BRICKS.contains(world.getBlockState(pos.above(5)).getBlock())
+					&& (world.getBlockState(pos.above(5)).is(BlockTags.STONE_BRICKS)
 							|| world.getBlockState(pos.above(50)).getBlock() instanceof AirBlock)) {
 				
 				if (patterned && layer % 2 == 1 && i % 2 == 1 && i <= layer * 2) {
@@ -599,8 +545,6 @@ public class MountainFortressFeature extends StructureFeature<JigsawConfiguratio
 			z += zIncrement;
 		}
 		
-
 	}
-
 
 }
