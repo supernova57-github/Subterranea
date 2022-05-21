@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "subterranea:mountain_fortress",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 954239258,
+    "spacing": 15,
+    "separation": 10,
+    "type": "minecraft:random_spread"
+  }
+}

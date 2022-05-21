@@ -1,0 +1,10 @@
+{
+  "type": "subterranea:mountain_fortress",
+  "biomes": "#subterranea:has_structure/mountain_fortress",
+  "adapt_noise": false,
+  "config": {
+    "start_pool": "subterranea:mountain_fortress/start",
+    "size": 15
+  },
+  "spawn_overrides": {}
+}

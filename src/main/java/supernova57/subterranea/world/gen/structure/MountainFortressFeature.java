@@ -49,9 +49,9 @@ public class MountainFortressFeature extends StructureFeature<JigsawConfiguratio
 	
 	public static ArrayList<ChunkPos> deadChunks = new ArrayList<>();
 
-	public MountainFortressFeature(Codec<JigsawConfiguration> configCodec) {
+	public MountainFortressFeature(Codec<JigsawConfiguration> structureCodec) {
 		
-		super(configCodec, 
+		super(structureCodec, 
 			 (context) -> MountainFortressFeature.canGenerate(context) ? 
 					 JigsawPlacement.addPieces(
 								context,
